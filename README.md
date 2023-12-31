@@ -107,7 +107,6 @@ There is an example to start a container that listens on default `8984` (both TC
 $ docker run -d -p 8984:8984 -p 8984:8984/udp --name ss-libev --restart=always -v /opt/shadowsocks-libev:/etc/shadowsocks-libev -v /opt/ssl:/etc/ssl potzedd/shadowsocks-v2ray
 ```
 
-**Warning**: The port number must be same as configuration and opened in firewall.
 
 
 [1]: https://docs.docker.com/install/
