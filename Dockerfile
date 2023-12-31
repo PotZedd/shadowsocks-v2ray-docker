@@ -33,7 +33,7 @@ RUN set -ex \
 	&& /root/xray-plugin.sh \
 	&& rm -f /root/v2ray-plugin.sh /root/xray-plugin.sh
 
-VOLUME ["shadowsocks-libev:/etc/shadowsocks-libev","ssl:/etc/ssl"]
+VOLUME ["/etc/shadowsocks-libev","/etc/ssl"]
 ENV TZ=Asia/Shanghai
 ENTRYPOINT [ "ss-server", "-c" ]
 CMD ["/etc/shadowsocks-libev/config.json"]
