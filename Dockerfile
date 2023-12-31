@@ -1,4 +1,4 @@
-# Dockerfile for shadowsocks-libev based alpine
+# A docker image for shadowsocks-libev server with v2rat support
 
 FROM alpine:latest
 MAINTAINER ="PotZedd <potzedd@gmail.com>"
