@@ -33,9 +33,7 @@ RUN set -ex \
 	&& /root/xray-plugin.sh \
 	&& rm -f /root/v2ray-plugin.sh /root/xray-plugin.sh
 
-EXPOSE 8984/tcp
-EXPOSE 8984/udp
-VOLUME ["/opt/shadowsocks-libev:/etc/shadowsocks-libev","/opt/ssl:/etc/ssl"]
+VOLUME ["shadowsocks-libev:/etc/shadowsocks-libev","ssl:/etc/ssl"]
 ENV TZ=Asia/Shanghai
 ENTRYPOINT [ "ss-server", "-c" ]
 CMD ["/etc/shadowsocks-libev/config.json"]
