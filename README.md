@@ -25,9 +25,11 @@ A sample in JSON like below:
 {
     "server":"0.0.0.0",
     "server_port":8984,
+    "local_port": 1080,
     "password":"password",
     "timeout":600,
     "method":"chacha20-ietf-poly1305",
+    "no_delay": true,
     "fast_open":true,
     "nameserver":"8.8.8.8",
     "mode":"tcp_and_udp"
@@ -40,9 +42,11 @@ If you want to enable **v2ray-plugin with http**, a sample in JSON like below:
 {
     "server":"0.0.0.0",
     "server_port":8984,
+    "local_port": 1080,
     "password":"password",
     "timeout":600,
     "method":"chacha20-ietf-poly1305",
+    "no_delay": true,
     "fast_open":true,
     "nameserver":"8.8.8.8",
     "mode":"tcp_and_udp"
@@ -57,9 +61,11 @@ If you want to enable **v2ray-plugin with tls**, a sample in JSON like below:
 {
     "server":"0.0.0.0",
     "server_port":8984,
+    "local_port": 1080,
     "password":"password",
     "timeout":600,
     "method":"chacha20-ietf-poly1305",
+    "no_delay": true,
     "fast_open":true,
     "nameserver":"8.8.8.8",
     "mode":"tcp_and_udp"
@@ -74,9 +80,11 @@ If you want to enable **xray-plugin with http**, a sample in JSON like below:
 {
     "server":"0.0.0.0",
     "server_port":8984,
+    "local_port": 1080,
     "password":"password",
     "timeout":600,
     "method":"chacha20-ietf-poly1305",
+    "no_delay": true,
     "fast_open":true,
     "nameserver":"8.8.8.8",
     "mode":"tcp_and_udp"
