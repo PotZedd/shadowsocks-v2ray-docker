@@ -12,7 +12,7 @@ $ docker pull potzedd/shadowsocks-v2ray
 
 It can be found at [Docker Hub][2].
 
-## configuration file wirh docker volumes
+## configuration file with docker volumes
 
 You **must create a configuration file**  `/opt/shadowsocks-libev/config.json` in host at first:
 
