@@ -1,7 +1,7 @@
 # Dockerfile for shadowsocks-libev based alpine
 
 FROM alpine:latest
-LABEL maintainer="Teddysun <i@teddysun.com>"
+MAINTAINER ="PotZedd <potzedd@gmail.com>"
 
 WORKDIR /root
 COPY v2ray-plugin.sh /root/v2ray-plugin.sh
@@ -33,6 +33,9 @@ RUN set -ex \
 	&& /root/xray-plugin.sh \
 	&& rm -f /root/v2ray-plugin.sh /root/xray-plugin.sh
 
-VOLUME /etc/shadowsocks-libev
+EXPOSE 8984/tcp
+EXPOSE 8984/udp
+VOLUME ["/opt/shadowsocks-libev:/etc/shadowsocks-libev","/opt/ssl:/etc/ssl"]
 ENV TZ=Asia/Shanghai
-CMD [ "ss-server", "-c", "/etc/shadowsocks-libev/config.json" ]
+ENTRYPOINT [ "ss-server", "-c" ]
+CMD ["/etc/shadowsocks-libev/config.json"]
