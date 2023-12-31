@@ -104,12 +104,9 @@ This container with sample configuration `/etc/shadowsocks-libev/config.json`
 There is an example to start a container that listens on default `8984` (both TCP and UDP):
 
 ```bash
-$ docker run -d --name ss-libev --restart=always potzedd/shadowsocks-v2ray
+$ docker run -d -p 8984:8984 -p 8984:8984/udp --name ss-libev --restart=always -v /opt/shadowsocks-libev:/etc/shadowsocks-libev -v /opt/ssl:/etc/ssl potzedd/shadowsocks-v2ray
 ```
-**OR** start a container that listens on  `your port(eg.8388)` and custom docker volumes path 
-```bash
-$ docker run -d -p 8388:8388 -p 8388:8388/udp --name ss-libev --restart=always -v /opt/shadowsocks-libev:/etc/shadowsocks-libev -v /opt/ssl:/etc/ssl potzedd/shadowsocks-v2ray
-```
+
 **Warning**: The port number must be same as configuration and opened in firewall.
 
 
