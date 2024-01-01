@@ -73,7 +73,7 @@ If you want to enable **v2ray-plugin with tls**, a sample in JSON like below:
     "plugin_opts":"server;tls;cert=/etc/ssl/fullchain.cer;key=/etc/ssl/private.key;path=/path;fast-open;loglevel=none"
 }
 ```
-**#"path" in "plugin_opts" is your path in nginx conf file "location" also same as path in yuor sahdowsocks cli**
+**#"path" in "plugin_opts" is your path in nginx conf file "location" also same as path in yuor sahdowsocks client**
 
 If you want to enable **xray-plugin with http**, a sample in JSON like below:
 
