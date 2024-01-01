@@ -16,7 +16,7 @@ It can be found at [Docker Hub][2].
 
 You **must create a configuration file**  `/opt/shadowsocks-libev/config.json` in host at first:
 
-If you want to use **v2ray-plugin with tls** you **must create a cert file** with [acme.sh][3] in /opt/ssl (same file used in nginx）
+If you want to use **v2ray-plugin with tls** you **must create a cert file** with [acme.sh][3] in /opt/ssl (same file used in nginx）.
 
 
 A sample in JSON like below:
@@ -73,7 +73,7 @@ If you want to enable **v2ray-plugin with tls**, a sample in JSON like below:
     "plugin_opts":"server;tls;cert=/etc/ssl/fullchain.cer;key=/etc/ssl/private.key;path=/path;fast-open;loglevel=none"
 }
 ```
-**#"path" in "plugin_opts" is your path in nginx conf file "location" also same as path in yuor sahdowsocks client**
+**#"path" in "plugin_opts" is your path in nginx conf file "location" also same as path in yuor sahdowsocks client.**
 
 If you want to enable **xray-plugin with http**, a sample in JSON like below:
 
@@ -98,7 +98,7 @@ For more `v2ray-plugin` configrations please visit v2ray-plugin [usage][4].
 
 For more `xray-plugin` configrations please visit xray-plugin [usage][5].
 
-This container with sample configuration `/etc/shadowsocks-libev/config.json`
+This container with sample configuration `/opt/shadowsocks-libev/config.json`
 
 ## Start a container
 There is an example to start a container that listens on default `8984` (both TCP and UDP):
